@@ -1,4 +1,4 @@
-import { UsuarioCriacaoDTO } from "./usuarioCriacaoDTO";
-import {PartialType} from '@nestjs/mapped-types'
+import { UsuarioCriacaoDTO } from './usuarioCriacaoDTO';
+import { PartialType } from '@nestjs/mapped-types';
 
-export class UsuarioEdicaoDTO extends PartialType(UsuarioCriacaoDTO){}
+export class UsuarioEdicaoDTO extends PartialType(UsuarioCriacaoDTO) {}

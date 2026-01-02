@@ -6,15 +6,17 @@ import { ConfigModule } from '@nestjs/config';
 import { DbConfig } from './config/db.config';
 import { UsuarioModule } from './modules/usuarios/usuario.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { JwtModule } from '@nestjs/jwt';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal:true
+      isGlobal: true,
     }),
     TypeOrmModule.forRootAsync({
       useClass: DbConfig,
     }),
+
     UsuarioModule,
     AuthModule,
   ],

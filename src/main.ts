@@ -8,15 +8,15 @@ async function bootstrap() {
 
   app.useGlobalPipes(
     new ValidationPipe({
-      transform:true,
-      whitelist:true,
-      forbidNonWhitelisted:true
-    })
-  )
+      transform: true,
+      whitelist: true,
+      forbidNonWhitelisted: true,
+    }),
+  );
 
-  useContainer(app.select(AppModule),{
-    fallbackOnErrors:true
-  })
+  useContainer(app.select(AppModule), {
+    fallbackOnErrors: true,
+  });
 
   await app.listen(process.env.PORT ?? 3000);
 }
